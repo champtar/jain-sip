@@ -4,7 +4,7 @@
 
 	<groupId>javax.sip</groupId>
 	<artifactId>jain-sip</artifactId>
-	<version>1.2.1-SNAPSHOT</version>
+	<version>1.2.1-jitsi+dfsg1</version>
 
 	<packaging>pom</packaging>
 
@@ -56,8 +56,8 @@
 	</licenses>
 
 	<modules>
-		<module>jain-sip-api</module>
-		<module>jain-sip-ri</module>
+		<!--module>jain-sip-api</module-->
+		<module>jain-sip-ri-plain</module>
 	</modules>
 
 	<properties>
@@ -143,6 +143,12 @@
 			<plugin>
 		  		<artifactId>maven-release-plugin</artifactId>
 				<version>2.2.2</version>		  		
+			</plugin>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>3.0.0</version>
+				<extensions>true</extensions>
 			</plugin>
 		</plugins>
 	</build>
